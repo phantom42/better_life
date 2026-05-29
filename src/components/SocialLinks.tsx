@@ -13,9 +13,8 @@ export default function SocialLinks({ displayDebunk = false }: IProps) {
 		<>
 			{displayDebunk &&
 				<div className="flex items-center justify-between gap-4 mt-4 social-links">
-					<Link to="/" className="back-link flex items-center gap-2 italic font-bold cursor-pointer">
-						<FaArrowLeft /> Debunk a myth
-					</Link>
+					<a href="https://adoptionmyths.net" target="_blank" rel="noopener noreferrer" aria-label="Adoption Myths Link" className="flex items-center gap-1"><FaArrowLeft /> Debunk Adoption Myths</a>
+
 					<div className="flex items-center gap-4">
 						{links}
 					</div>
