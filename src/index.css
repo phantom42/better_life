@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Libre+Franklin:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+	--main-background: #111120;
+	--alt-background: #13131f;
+	--main-text-color: #f0ede8;
+	--main-headline-color: firebrick;
+	--main-text-highlight: #e8855a;
+	--main-text-em: #ff4d00;
+	--article-header-color: #c44b4b;
+	--box-background: #1c1c2e;
+	--box-padding: 1em;
+	--box-text-color: #9090b8;
+	--box-text-highlight: #c5c5e0;
+	--border-color: #e8855a;
+	--main-font: "Libre Franklin", sans-serif;
+	--fancy-font: 'DM Serif Display', serif;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--main-background: #d6d2cc;
+		--alt-background: #ccc8c2;
+		--main-text-color: #1a1a2e;
+		--main-headline-color: #b91c1c;
+		--main-text-highlight: #c2622a;
+		--main-text-em: #c2410c;
+		--article-header-color: #b91c1c;
+		--box-background: #c8c3bb;
+		--box-text-color: #4a4a6a;
+		--box-text-highlight: #2e2e50;
+		--border-color: #c2622a;
+		--color-main-500: #3a3a5c;
+	}
+}
+header {
+	text-transform: uppercase;
+	font-weight:bold;
+	margin-bottom: 1em;
+}
+#headline p {
+	margin: 1em 0;
+}
+@theme{
+	--color-main-500: #9090b8;
+	--color-highlight-500: #e8855a;
+}
+
+body {
+	background-color: var(--main-background);
+	margin: 1em 2em;
+	font-family: var(--main-font);
+}
+h1 {
+	color: var(--main-headline-color);
+	font-weight: bold
+}
+h2 {
+	color: var(--main-text-color);
+	font-family: var(--fancy-font);
+}
+.box {
+	background-color: var(--box-background);
+	padding: var(--box-padding);
+	border-left: 3px solid var(--border-color);
+	color: var(--box-text-color);
+	margin: 1em 0em;
+	border-radius: 0 4px 4px 0;
+}
+.credit {
+	margin: 1em 0em;
+	color: var(--main-text-color);
+}
+.social-links a,
+.social-links .back-link {
+	color: var(--box-text-color);
+	transition: color 0.2s;
+}
+.social-links a:hover,
+.social-links .back-link:hover {
+	color: var(--main-text-highlight);
+}
+a {
+	transition: color .2s ease;
+}
+.drop {
+	background-color: var(--box-background);
+	padding: var(--box-padding);
+	color: var(--box-text-color);
+	margin: 1em 0em;
+	border-radius: 10px;
+}
+.drop > p {
+	padding: 1em;
+}
+.drop-header {
+	background-color: var(--box-background);
+	padding: 1em;
+	border-radius: 5px;
+}
+.drop-link {
+	color: var(--main-text-highlight);
+}
+.drop-link:hover,
+.drop-link:hover span {
+	color: white;
+}
+#headline.drop-headline p em {
+	color: var(--box-text-highlight);
+	font-weight: bold;
+	font-style: italic;
+}
+.search-box {
+	background-color: var(--box-background);
+	color: var(--main-text-color);
+}
